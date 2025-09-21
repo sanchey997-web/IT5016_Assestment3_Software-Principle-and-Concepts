@@ -1,118 +1,71 @@
-# IT5016_Assestment3_Software-Principle-and-Concepts
+#  Ferry Booking System
 
-# Ferry Booking System  
+##  Overview
+The Ferry Booking System is a small python program that allows the user to:
 
-## Overview  
-The **Ferry Booking System** is a simple Python program that allows users to:  
 - Create new bookings  
 - Collect customer details  
-- Add ferry services and calculate total costs  
-- Approve or reject booki# IT5016_Assestment3_Software-Principle-and-Concepts
-
-# Ferry Booking System  
-
-## Overview  
-The Ferry Booking System is a basic python application that enables one to:  
-- Create new bookings  
-- Collect customer details  
-- Add ferries and divide the total costs.  
+- Include ferry services and locate overall costs.  
 - Approve or reject bookings  
-- Show personal reservation information.  
-- See booking statistics (accepted, awaiting, rejected)  
+- Disclose single booking details.  
+- View the booking statistics (approved, not approved, pending)   
+It also demonstrates how principles of software design, namely, the concepts of SRP, DRY, KISS, YAGNI and Separation of Concerns were applied.
 
-It is a project that is aimed at beginners studying Object-Oriented Programming (OOP) in Python.  
-It is also an illustration of applying the principles of software design:  
-Separation of Concerns, SRP, DRY, KISS and YAGNI.  
+##  Features
+- Unique Ticket ID generation  
+- Customer info collection  
+- A number of ferry services that are cost calculating.  
+- Display booking details  
+- Booking statistics summary  
+- Menu-based interface is easy to use.  
 
-##  Features  
- Unique Ticket ID generation  
- Customer info collection  
- Various ferry services with costs calculations.  
- Acceptance or rejection of booking.  
- Display booking details  
- Booking statistics summary  
- Single menu-based interface.  
+##  Code Structure
+- Global Counter (count) - Executes the generation of ticket IDs that are unique.  
+- BookingSystem Class - This class is used to do bookings through the assistance of OOP(object oriented programming).  
 
-##  Code Structure  
-- **Global Counter (`count)` → Produces unique ticket IDs.  
-    - **BookingSystem Class** → This class is used to deal with booking based on OOP.  
-      - `__init__()` → Initializes booking object.  
-      - `costumer_info()` → Gathers information about customers.  
-      - `ferry-service-add-service/ferry-service-add-price()` Adds new services and prices.  
-      - `booking_approval()` → Approval logic.  
-      - `respond_booking()` → Approve/Reject booking.  
-      - `print booking information()` → Displays the information about the booking.  
-      - booking statistics() - Displays total statistics.  
-    - **Function main()` Function** → Offers menu based user interaction.  
+### Methods
+- __init__() - Sets up booking object.  
+- customer-info() - collects customer information.  
+- Added services and prices - ferry-service-add()  
+- approval of booking - Approval logic.  
+- respond_booking() - Approve/reject booking.  
+- show booking - Prints booking details.  
+- booking-statistics() - Shows overall statistics.  
+- main() Function - Floating menu user interface.  
 
-Software Design Principles Implemented.  
 
-### 1. Single Responsibility Principle (SRP).  
-Each method has **only one job**.  
-Example: costumer information only gathers customer information: costumer_info.  
+## Applied Software Designs Principles.
 
-### 2. **KISS (Keep It Simple, Stupid)**  
-- Menu system is based on a simple loop.  
-The addition of the services is carried out with the help of a simple for-loop.  
+### 1. SRP (Single Responsibility Principle)  
+Each method has only one job.  
+E.g.: customer information is just collected in customer-info.  
 
-### 3. **DRY (Don’t Repeat Yourself)**  
-- Bookings are held in all_bookings BookingSystem.  
-- A single loop is used to do statistics rather than multiple counters.  
+### 2. KISS (Keep It Simple, Stupid)  
+- Menu system has a basic loop.  
+- Addition of the services is made possible with the assistance of the basic for loop.  
 
-### 4. **YAGNI (You Aren’t Gonna Need It)**  
-- No redundant checks or functionality (just what is needed).  
+### 3. DRY (Don’t Repeat Yourself)  
+- All of the reservations are made in BookingSystem.all_bookings.  
+- Statistics is used in one loop instead of developing multiple counters.  
 
-### 5. **Separation of Concerns**  
-- The separation between input, logic and output is done into different methods.  
-- E.g. booking statistics() is not receiving input, but statistics.  
+### 4. YAGNI (You Aren’t Gonna Need It)  
+- Minimum number of features only the ones which are required.
 
-ngs  
-- Display individual booking details  
-- View booking statistics (approved, pending, not approved)  
+### 5. Separation of Concerns  
+- The various procedures are divided into input, logic and output.  
+An example: statistics is a book that does not require an input, but statistics.  
 
-This project is designed for **beginners** learning **Object-Oriented Programming (OOP)** in Python.  
-It also demonstrates the use of **software design principles**:  
-**SRP, DRY, KISS, YAGNI, and Separation of Concerns**.  
+## Reflection
+- The clean code and software design concepts make sense and are important as I now realize through this project.
+- SRP exposed me to the realization of how the code would still be easier to maintain once it is made of methods that are devoted to a single task.
+- KISS and DRY made me understand that the less the better and that repetition should be avoided as it brings about complexity.
+- The YAGNI principle made me avoid over complicating the features.
+Finally, Separation of Concerns has also assisted me to learn that code can be subdivided into distinct components in an attempt to make reading and debugging code easier.
 
-##  Features  
- Unique Ticket ID generation  
- Customer info collection  
- Multiple ferry services with cost calculation  
- Booking approval or rejection  
- Display booking details  
- Booking statistics summary  
- Simple menu-driven interface  
 
-##  Code Structure  
-- **Global Counter (`count`)** → Generates unique ticket IDs.  
-    - **`BookingSystem` Class** → Handles bookings using OOP principles.  
-      - `__init__()` → Initializes booking object.  
-      - `costumer_info()` → Collects customer details.  
-      - `ferry_service_details()` → Adds services and prices.  
-      - `booking_approval()` → Manages approval logic.  
-      - `respond_booking()` → Approve/Reject booking.  
-      - `display_booking_info()` → Prints booking details.  
-      - `booking_statistics()` → Shows overall statistics.  
-    - **`main()` Function** → Provides menu-based user interaction.  
-
-##  Software Design Principles Applied  
-
-### 1. **SRP (Single Responsibility Principle)**  
-Each method has **only one job**.  
-Example: `costumer_info()` only collects customer data.  
-
-### 2. **KISS (Keep It Simple, Stupid)**  
-- Menu system uses a **simple loop**.  
-- Adding services is done using a **basic for-loop**.  
-
-### 3. **DRY (Don’t Repeat Yourself)**  
-- All bookings are stored in `BookingSystem.all_bookings`.  
-- One loop handles statistics instead of writing multiple counters.  
-
-### 4. **YAGNI (You Aren’t Gonna Need It)**  
-- No unnecessary checks or features (only what’s required).  
-
-### 5. **Separation of Concerns**  
-- Input, logic, and output are separated into different methods.  
-- Example: `booking_statistics()` handles only statistics, not input.  
-
+## Future Improvements
+- Improve verification of user entries (e.g. valid date, numeric costs)
+- Add a convenient user interface (User Interface or web application)
+- Prepare reports (e.g. PDF receipts on bookings)
+- Allow the cancellations or schedule changes of booking.
+- Numerous user support: user log in and user roles.
